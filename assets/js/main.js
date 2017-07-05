@@ -33,5 +33,12 @@ var ajaxGif = function(gif){
 	})
 	.fail(function() {
 		console.log("error");
+		});
+
+	$("buscar-gif").click(function(event){
+		console.log("Entro");
+		$("#elemetos").empty();
+		var gif = $("#gif-text").val();
+		ajaxGif(gif);
 	});
-}
+});
